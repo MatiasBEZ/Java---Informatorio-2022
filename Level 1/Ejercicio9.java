@@ -22,5 +22,4 @@ public class Ejercicio9 {
         System.out.println("El caracter " + carac + " aparece " + count + " veces.");
         
     }
-
 }

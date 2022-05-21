@@ -23,5 +23,4 @@ public class Ejercicio2 {
         "\n" + x + " % " + y + " = "  +modulo);
 
     }
-
 }

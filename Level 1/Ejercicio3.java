@@ -17,7 +17,5 @@ public class Ejercicio3 {
             lista.add(i);
             System.out.println(lista);
         }
-
     }
-
 }

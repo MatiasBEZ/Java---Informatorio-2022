@@ -18,5 +18,4 @@ public class Ejercicio6 {
         System.out.println(x + " elevado a " + y + " es = " + resultado);
 
     }
-
 }

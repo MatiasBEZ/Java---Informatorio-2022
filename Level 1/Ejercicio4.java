@@ -22,5 +22,4 @@ public class Ejercicio4 {
         return valor * factorial(valor-1);
 
     }
-
 }

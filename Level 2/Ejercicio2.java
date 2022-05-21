@@ -25,7 +25,7 @@ public class Ejercicio2 {
 
     }
 
-    public static void imprimir(ArrayList lista) {
+    public static void imprimir(ArrayList<Integer> lista) {
 
         for (int i = 0; i < lista.size(); i++) {
             System.out.print(" - " + lista.get(i) + " - ");
@@ -33,5 +33,4 @@ public class Ejercicio2 {
         System.out.println("La lista contiene " + lista.size() + " elementos");
 
     }
-
 }

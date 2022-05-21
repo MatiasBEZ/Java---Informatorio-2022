@@ -25,7 +25,5 @@ public class Ejercicio1 {
             int rank = i + 1;
             System.out.println("#" + rank + " - " + ciudades.get(i));
         }
-
     }
-
 }
