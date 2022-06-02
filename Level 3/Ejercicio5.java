@@ -14,23 +14,9 @@ class Alumno {
     private int añoActual = Year.now().getValue();
 
     public Alumno(String apellido, String nombre, LocalDate fecha) {
-
         this.apellido = apellido;
         this.nombre = nombre;
         this.fechaDeNacimiento = fecha;
-
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public LocalDate getFechaDeNacimiento() {
-        return fechaDeNacimiento;
     }
 
     public String getNombreCompleto() {
