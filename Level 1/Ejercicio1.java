@@ -9,7 +9,7 @@ public class Ejercicio1 {
         Scanner scan = new Scanner(System.in);
         String name = scan.nextLine();
 
-        System.out.println("HOLA " + name);
+        System.out.println("HOLA " + name + "!!!");
 
     }
 }

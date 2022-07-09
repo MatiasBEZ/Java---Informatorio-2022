@@ -1,5 +1,5 @@
 import java.time.LocalDate;
-import java.time.Year;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,6 @@ class Alumno {
     private String apellido; 
     private String nombre;
     private LocalDate fechaDeNacimiento;
-    private int añoActual = Year.now().getValue();
 
     public Alumno(String apellido, String nombre, LocalDate fecha) {
         this.apellido = apellido;
@@ -23,8 +22,8 @@ class Alumno {
         return Stream.of(apellido,nombre).collect(Collectors.joining(" "));
     }
 
-    public Integer getEdad() {
-        return añoActual - fechaDeNacimiento.getYear();
+    public LocalDate getFechaDeNacimiento() {
+        return fechaDeNacimiento;
     }
 }
 
@@ -33,6 +32,7 @@ public class Ejercicio5 {
     public static void main (String[] args) {
 
         DateTimeFormatter df = DateTimeFormatter.ofPattern("d-MM-yyyy");
+        LocalDate añoActual = LocalDate.parse("01-06-2022", df);
 
         List<Alumno> alumnos = List.of(
             new Alumno("Ayala","Paprika",LocalDate.parse("01-10-1998", df)),
@@ -42,7 +42,7 @@ public class Ejercicio5 {
             new Alumno("Tepes","Vlad",LocalDate.parse("20-03-1431", df))
         );
 
-        Map<String,Integer> mapaAlumnos = alumnos.stream().collect(Collectors.toMap(Alumno::getNombreCompleto, Alumno::getEdad));
+        Map<String,Object> mapaAlumnos = alumnos.stream().collect(Collectors.toMap(Alumno::getNombreCompleto, e -> Period.between(e.getFechaDeNacimiento(), añoActual).getYears()));
         
         System.out.println(mapaAlumnos);
 
